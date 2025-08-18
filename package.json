@@ -1,0 +1,12 @@
+{
+  "name": "meu-servidor",
+  "version": "1.0.0",
+  "scripts": {
+    "start-chat": "node server-chat.js",
+    "start-tabela": "node server-tabela.js"
+  },
+  "dependencies": {
+    "ws": "^8.17.0",
+    "node-fetch": "^2.7.0"
+  }
+}
