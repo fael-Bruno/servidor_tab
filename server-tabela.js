@@ -27,11 +27,20 @@ async function fetchStandings() {
   }
 
   const j = await res.json();
+
   const table = (j.standings?.[0]?.table || []).map(r => ({
     position: r.position,
     team: r.team.name,
-    points: r.points
+    points: r.points,
+    playedGames: r.playedGames,
+    won: r.won,
+    draw: r.draw,
+    lost: r.lost,
+    goalsFor: r.goalsFor,
+    goalsAgainst: r.goalsAgainst,
+    goalDifference: r.goalDifference,
   }));
+
   return table;
 }
 
